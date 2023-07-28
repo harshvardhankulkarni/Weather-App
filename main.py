@@ -25,7 +25,6 @@ def weather_forcast(lat, lon):
         'appid': APIKEY
     }
     data = requests.get('https://api.openweathermap.org/data/3.0/onecall', params=params).json()
-    print(data)
     return data['daily']
 
 
