@@ -31,7 +31,7 @@ def weather_forcast(lat, lon):
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        lat, lon = return_location(request.form.get('city'))
+        lat, lon = return_location(request.form['city'])
         weather_info = []
         for daily_info in weather_forcast(lat, lon)[:6]:
             weather_info.append({
@@ -50,4 +50,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='2401:4900:5035:3685:79be:c67e:e5dc:8824')
