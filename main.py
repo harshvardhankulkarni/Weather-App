@@ -50,4 +50,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='2401:4900:5035:3685:79be:c67e:e5dc:8824')
+    app.run(debug=True)
