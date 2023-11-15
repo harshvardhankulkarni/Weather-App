@@ -1,10 +1,15 @@
 import datetime
+import os
+
 import requests
+from dotenv import load_dotenv
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-APIKEY = open("APIKEY", 'r').read()
+load_dotenv()
+
+APIKEY = os.getenv('APIKEY')
 
 
 def return_location(city_name: str):
